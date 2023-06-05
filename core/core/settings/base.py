@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_browser_reload",
+    "home",
+    "search",
 ]
 
 MIDDLEWARE = [
@@ -56,7 +59,10 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
+
+X_FRAME_OPTIONS = "ALLOW-FROM preview.app.github.dev"
 
 ROOT_URLCONF = "core.urls"
 
